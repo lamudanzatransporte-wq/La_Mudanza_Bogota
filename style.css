@@ -188,32 +188,15 @@ body{
   z-index:120; text-decoration:none;
 }
 
-/* ========== Responsive ========== */
-@media (max-width:1000px){
-  .hero-grid{grid-template-columns:1fr; text-align:center}
-  .hero-media{order:-1}
-  .cards{grid-template-columns:1fr}
-  .why-grid{grid-template-columns:1fr}
-  .form-grid{grid-template-columns:1fr}
-  .testi-grid{grid-template-columns:1fr}
-  .footer-grid{flex-direction:column;align-items:flex-start}
-}
-
-@media (max-width:700px){
-  .nav-menu{display:none;position:absolute;right:20px;top:70px;background:white;padding:12px;border-radius:8px;box-shadow:0 10px 30px rgba(10,10,10,0.08)}
-  .nav-toggle{display:block}
-  .header-inner{padding:10px 0}
-}
-
-/* ========== Redes sociales ========== */
+/* ========== Redes sociales (moved left to avoid overlap) ========== */
 .social-bar {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px; /* moved to left */
     display: flex;
     flex-direction: column;
     gap: 12px;
-    z-index: 9999;
+    z-index: 110;
 }
 
 .social-bar img {
@@ -278,4 +261,28 @@ body{
 
 .slider-btn.right {
     right: 10px;
+}
+
+/* ========== Responsive ========== */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr; text-align:center}
+  .hero-media{order:-1}
+  .cards{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .form-grid{grid-template-columns:1fr}
+  .testi-grid{grid-template-columns:1fr}
+  .footer-grid{flex-direction:column;align-items:flex-start}
+}
+
+@media (max-width:700px){
+  .nav-menu{display:none;position:absolute;right:20px;top:70px;background:white;padding:12px;border-radius:8px;box-shadow:0 10px 30px rgba(10,10,10,0.08)}
+  .nav-toggle{display:block}
+  .header-inner{padding:10px 0}
+
+  /* When open on mobile we want a vertical list */
+  .nav-menu.open {
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
 }
