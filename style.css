@@ -286,3 +286,64 @@ body{
     gap:8px;
   }
 }
+
+/* --- Texto SEO --- */
+.seo-text {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.seo-text h2 {
+  margin-top: 20px;
+  font-size: 24px;
+  color: #1e3a8a;
+}
+
+.seo-text p, .seo-text ul {
+  font-size: 17px;
+  color: #333;
+  line-height: 1.6;
+}
+
+.seo-text ul {
+  padding-left: 20px;
+}
+
+/* --- FAQ / Preguntas Frecuentes --- */
+.faq-container {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.faq-item {
+  background: white;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-left: 6px solid #3b82f6; /* azul llamativo */
+}
+
+.faq-item:hover {
+  transform: scale(1.02);
+}
+
+.faq-question {
+  font-size: 20px;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.faq-answer {
+  margin-top: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #374151;
+  display: none;
+}

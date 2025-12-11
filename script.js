@@ -155,3 +155,22 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".faq-item");
+
+  items.forEach(item => {
+    item.addEventListener("click", () => {
+      const answer = item.querySelector(".faq-answer");
+      const isVisible = answer.style.display === "block";
+
+      // Cerrar todas antes de abrir otra
+      document.querySelectorAll(".faq-answer").forEach(a => {
+        a.style.display = "none";
+      });
+
+      // Toggle
+      answer.style.display = isVisible ? "none" : "block";
+    });
+  });
+});
